@@ -16,6 +16,7 @@ public class SfgDiApplication {
 
 		MyController myController = (MyController) ctx.getBean("myController");
 
+		System.out.println("using Primary Bean");
 		String msg = myController.Test();
 
 		System.out.println(msg);
