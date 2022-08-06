@@ -1,0 +1,12 @@
+guru:
+  jms:
+    username: JMS Person
+    password: blabla
+    dburl: dfgjdfgdfg
+
+--- #seperator
+spring:
+  profiles: ar
+guru:
+  jms:
+    username: Arabic JMS User
