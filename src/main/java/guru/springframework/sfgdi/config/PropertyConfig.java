@@ -9,7 +9,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@PropertySource({"classpath:datasource.properties", "classpath:jms.properties"})
+//@PropertySource({"classpath:datasource.properties", "classpath:jms.properties"})
 //can also use @PropertySources with multiple PropertySource annotations for each one (started in spring 4)
 public class PropertyConfig {
     @Value("${guru.username}")
@@ -47,14 +47,6 @@ public class PropertyConfig {
         jmsBroker.setDburl(jmsUrl);
         return jmsBroker;
 
-    }
-
-
-
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer properties(){
-        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer= new PropertySourcesPlaceholderConfigurer();
-        return propertySourcesPlaceholderConfigurer;
     }
 
 
